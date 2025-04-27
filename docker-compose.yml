@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  ashachatbot:
+    build: .
+    ports:
+      - "8000:8000"  # Backend API
+      - "3000:3000"  # Frontend
+    volumes:
+      - ./backend/data:/app/backend/data
+      - ./backend/chroma_db:/app/backend/chroma_db
+      - ./backend/chroma_sessions_db:/app/backend/chroma_sessions_db
+      - ./backend/logs:/app/backend/logs
+    environment:
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ASHA_API_KEY=${ASHA_API_KEY}
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - NEXT_PUBLIC_API_KEY=${ASHA_API_KEY}
+    restart: unless-stopped
