@@ -1,0 +1,40 @@
+# AshaChatbot Requirements - April 2025
+
+# Core LangChain packages
+langchain==0.1.8          # Latest as of April 2025
+langchain-core==0.1.15    # Latest core package
+langchain-community==0.1.5 # Community integrations
+langchain-openai==0.1.7   # OpenAI integration
+
+# LLM Access
+openrouter==1.0.0         # Updated to version 1.0 for API compatibility
+requests==2.31.0          # HTTP requests
+
+# Vector Database
+chromadb==0.5.3           # Latest ChromaDB version
+sentence-transformers==2.4.0 # For embeddings
+hf_xet>=0.4.0            # For Hugging Face Xet Storage optimization
+
+# Web Framework
+fastapi==0.113.0          # Latest FastAPI
+uvicorn==0.28.0           # ASGI server
+pydantic==2.6.1           # Data validation
+python-dotenv==1.0.0      # Environment variables
+
+# Data Processing
+pandas==2.2.0             # Data manipulation
+numpy==1.26.3             # Numerical computing
+python-multipart==0.0.7   # For handling multipart/form-data
+
+# UI/Frontend (for Gradio interface)
+gradio==4.13.0            # UI framework
+
+# Utilities
+python-jose==3.3.0        # JWT
+passlib==1.7.4            # Password hashing
+bcrypt==4.1.2             # Password hashing
+aiofiles==23.2.1          # Async file operations
+jsonschema==4.21.1        # JSON schema validation
+tenacity==8.2.3           # Retry logic
+jinja2==3.1.3             # Templates
+markdown==3.5.2           # Markdown parsing
